@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Heula Atuh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="manifest" href="/img/webmanifest.json">
+    <link rel="stylesheet" href="/login.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/8.0.13/esm/ionicons.min.js" integrity="sha512-FmSOv8ykH6wXPQvMmIjbOq9VOgcm6ksJ8tm7IsPXYUeTKTck/fCdyyAxiP5HZeowzqBelKf/Q9bspX/RtRjdHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+  <body>
+  <section>
+      <form method="POST" action="/login">
+        <h1>Login</h1>
+    
+        <div class="inputbox">
+          <ion-icon name="mail-outline"></ion-icon>
+          <input type="text" name="username" required>
+          <label>Username</label>
+        </div>
+    
+        <div class="inputbox">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input type="password" name="password" required>
+          <label>Password</label>
+        </div>
+    
+        <button type="submit">Log in</button>
+      </form>
+    </section>
+  </body>
+</html>

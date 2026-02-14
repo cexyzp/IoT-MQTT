@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+<link rel="manifest" href="/icons/site.webmanifest">
+  <link rel="stylesheet" href="/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>IoT Dashboard</title>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+<h2>IoT Dashboard</h2>
+</header>
+
+<main>
+<!-- ========== SENSOR CARDS ========== -->
+<div class="card-box">
+<div class="card1">
+<i class="fa-solid fa-water"></i>
+<div class="isi">
+<p>
+Turbidity
+</p>
+<h1 id="turVal"><%= sensor.tur %></h1>
+</div>
+</div>
+<div class="card2">
+<i class="fa-solid fa-circle-nodes"></i>
+<div class="isi">
+<p>
+Cahaya
+</p>
+<h1 id="cahayaVal"><%= sensor.cahaya %></h1>
+</div>
+</div>
+<div class="card3">
+<i class="fa-solid fa-seedling"></i>
+<div class="isi">
+<p>
+Soil Moist
+</p>
+<h1 id="soilVal"><%= sensor.soil %></h1>
+</div>
+</div>
+<div class="card4">
+<i class="fa-solid fa-temperature-full"></i>
+<div class="isi">
+<p>
+Suhu Air
+</p>
+<h1 id="tempVal"><%= sensor.temp %></h1>
+</div>
+</div>
+</div>
+
+<!-- ========== CONTROL SECTION ========== -->
+<div class="control-box">
+<div class="control1">
+<div class="lampu">
+<i class="fa-solid fa-lightbulb"></i>
+<div class="isi">
+<p class="com">
+Lampu
+</p>
+<p id="lampu">
+Mati
+</p>
+</div>
+<button data-device="lampu" class="btn1">
+<i class="fa-solid fa-power-off"></i>
+</button>
+</div>
+</div>
+<div class="control2">
+<div class="pump">
+<i class="fa-solid fa-faucet"></i>
+<div class="isi">
+<p class="com">
+Sprinkler
+</p>
+<p id="sprinkle">
+Mati
+</p>
+</div>
+<button data-device="sprinkle" class="btn2">
+<i class="fa-solid fa-power-off"></i>
+</button>
+</div>
+</div>
+<div class="control3">
+<div class="fan">
+<i class="fa-solid fa-jar"></i>
+<div class="isi">
+<p class="com">
+Fish
+</p>
+<p id="fan">
+Mati
+</p>
+</div>
+<button data-device="fan" class="btn3">
+<i class="fa-solid fa-power-off"></i>
+</button>
+</div>
+</div>
+<div class="control4">
+<div class="oto">
+<i class="fa-solid fa-arrows-rotate"></i>
+<div class="isi">
+<p class="com">
+Otomatis
+</p>
+<p id="oto">
+Mati
+</p>
+</div>
+<button data-device="oto" class="btn4">
+<i class="fa-solid fa-power-off"></i>
+</button>
+</div>
+</div>
+</div>
+
+<!-- ========== CHARTS ========== -->
+<div class="chart-box">
+<div id="chart1">
+<h2>Turbidity</h2>
+<div id="chartTur"></div>
+</div>
+<div id="chart2">
+<h2>Suhu</h2>
+<div id="chartTemp"></div>
+</div>
+<div id="chart3">
+<h2>Soil</h2>
+<div id="chartSoil"></div>
+</div>
+<div id="chart4">
+<h2>Cahaya</h2>
+<div id="chartLight"></div>
+</div>
+</div>
+
+<div class="time-box">
+<h2 class="jadwal">Jadwal Aktif</h2>
+<div class="top">
+<div class="start">
+<input type="time" name="starts" id="starts" />
+</div>
+<h2>-</h2>
+<div class="end">
+<input type="time" name="ends" id="ends" />
+</div>
+</div>
+
+<div class="bottom">
+<div class="reset">
+<i class="fa-solid fa-arrow-rotate-right"></i>
+<h2>Reset</h2>
+</div>
+<div class="simpan">
+<i class="fa-solid fa-floppy-disk"></i>
+<h2>Simpan</h2>
+</div>
+</div>
+</div>
+
+</main>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script type="module" src="/main.js"></script>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+Swal.fire({
+title: 'Welcome',
+padding: '0px 0px 10em 0px',
+background: '#000 url(https://uploads.onecompiler.io/4236jjxv8/4449224pf/1000148518.jpg) center center / cover no-repeat',
+color: '#000',
+showConfirmButton: false,
+});
+});
+</script>
+
+</body>
+</html>
